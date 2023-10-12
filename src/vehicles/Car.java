@@ -11,12 +11,11 @@ import oocminihw2.Vehicle;
  *
  * @author dougl
  */
-public class Car extends Vehicle implements Drivable{
+public class Car extends Vehicle implements Drivable {
 
     public Car(float speed, String make, String type, int numPassengers) {
         super(speed, make, type, numPassengers);
     }
-    
 
     @Override
     public void accelerate(float speed) {
@@ -53,6 +52,4 @@ public class Car extends Vehicle implements Drivable{
         return type;
     }
 
-    
-    
 }

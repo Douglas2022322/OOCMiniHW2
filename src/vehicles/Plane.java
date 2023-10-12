@@ -11,7 +11,7 @@ import oocminihw2.Vehicle;
  *
  * @author dougl
  */
-public class Plane extends Vehicle implements Flyable{
+public class Plane extends Vehicle implements Flyable {
 
     public Plane(float speed, String make, String type, int numPassengers) {
         super(speed, make, type, numPassengers);
@@ -61,5 +61,5 @@ public class Plane extends Vehicle implements Flyable{
     public String getType() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
+
 }

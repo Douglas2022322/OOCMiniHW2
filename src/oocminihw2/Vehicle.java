@@ -9,6 +9,7 @@ package oocminihw2;
  * @author sweis
  */
 public abstract class Vehicle {
+
     protected float speed;
     protected float direction = 0;
     protected String make;
@@ -25,6 +26,4 @@ public abstract class Vehicle {
         this.numPassengers = numPassengers;
     }
 
-   
-    
 }

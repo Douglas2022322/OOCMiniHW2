@@ -11,7 +11,7 @@ import oocminihw2.Vehicle;
  *
  * @author dougl
  */
-public class Boat extends Vehicle implements Sailable{
+public class Boat extends Vehicle implements Sailable {
 
     public Boat(float speed, String make, String type, int numPassengers) {
         super(speed, make, type, numPassengers);
@@ -36,5 +36,5 @@ public class Boat extends Vehicle implements Sailable{
     public void landHo() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
+
 }

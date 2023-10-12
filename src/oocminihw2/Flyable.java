@@ -9,6 +9,8 @@ package oocminihw2;
  * @author sweis
  */
 public interface Flyable extends Drivable {
+
     public void changeAltitude(float change);
+
     public float getAltitude();
 }
