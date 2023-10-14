@@ -9,57 +9,69 @@ import oocminihw2.Vehicle;
 
 /**
  *
- * @author dougl
+ * @author Douglas
  */
 public class Plane extends Vehicle implements Flyable {
 
-    public Plane(float speed, String make, String type, int numPassengers) {
-        super(speed, make, type, numPassengers);
-    }
+    private float altitude;//Stores the plane altitude
 
+    //Object constructor from super class
+    public Plane(float speed, String make, String type, int numPassengers, int numWings) {
+        super(speed, make, type, numPassengers);
+        super.numWings = numWings;
+    }
+    
+    
+    //Interface abstract methods
     @Override
     public void changeAltitude(float change) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
     }
 
     @Override
     public float getAltitude() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return altitude;
     }
 
     @Override
     public void accelerate(float speed) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        super.setSpeed(speed);
     }
 
     @Override
     public void brake() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        super.setSpeed(0);
     }
 
     @Override
     public void turn(float angle) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        super.setDirection(angle);
     }
 
     @Override
     public float getDirection() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return super.getDirection();
     }
 
     @Override
     public float getSpeed() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return super.getSpeed();
     }
 
     @Override
     public String getMake() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return make;
     }
 
     @Override
     public String getType() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return type;
     }
+
+    public void setAltitude(float altitude) {
+        this.altitude = altitude;
+    }
+    
+    
 
 }

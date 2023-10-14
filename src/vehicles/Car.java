@@ -9,37 +9,41 @@ import oocminihw2.Vehicle;
 
 /**
  *
- * @author dougl
+ * @author Douglas
  */
 public class Car extends Vehicle implements Drivable {
 
-    public Car(float speed, String make, String type, int numPassengers) {
+    //Object constructor from super class
+    public Car(float speed, String make, String type, int numPassengers, int numWheels) {
         super(speed, make, type, numPassengers);
+        super.numWheels = numWheels;
+
     }
 
+    //Interface abstract methods
     @Override
     public void accelerate(float speed) {
-        this.speed += speed;
+        super.setSpeed(speed);
     }
 
     @Override
     public void brake() {
-        this.speed = 0;
+        super.setSpeed(0);
     }
 
     @Override
     public void turn(float angle) {
-        this.direction = angle;
+        super.setDirection(angle);
     }
 
     @Override
     public float getDirection() {
-        return direction;
+        return super.getDirection();
     }
 
     @Override
     public float getSpeed() {
-        return speed;
+        return super.getSpeed();
     }
 
     @Override

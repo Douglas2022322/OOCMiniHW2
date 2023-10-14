@@ -10,7 +10,7 @@ import vehicles.Plane;
 
 /**
  *
- * @author sweiss
+ * @author sweiss edit by Douglas Vinicius Dierings
  */
 public class OOCMiniHW2 {
 
@@ -18,13 +18,18 @@ public class OOCMiniHW2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Objects
+        Drivable car1 = new Car(0, "Volvo", "SUV", 3, 4);
+        Flyable plane1 = new Plane(0, "Embraer", "Cargo", 2, 2);
+        Sailable boat1 = new Boat(0, "Princess", "Yacht", 2, 1);
 
-        Drivable car1 = new Car(0, "Volvo", "SUV", 4);
-        Flyable plane1 = new Plane(0, "Embraer", "Cargo", 2);
-        Sailable boat1 = new Boat(0, "Princess", "Yacht", 2);
-
+        //Testing the methods and interface
         car1.accelerate(20);
         System.out.println(car1.getSpeed());
+        System.out.println(car1.getType());
+        plane1.accelerate(15);
+        System.out.println(plane1.getSpeed());
+        System.out.println(plane1.getMake());
 
     }
 

@@ -9,32 +9,39 @@ import oocminihw2.Vehicle;
 
 /**
  *
- * @author dougl
+ * @author Douglas
  */
 public class Boat extends Vehicle implements Sailable {
 
-    public Boat(float speed, String make, String type, int numPassengers) {
+    private boolean isSailHoisted;
+
+    //Object constructor from super class
+    public Boat(float speed, String make, String type, int numPassengers, int numSails) {
         super(speed, make, type, numPassengers);
+        super.numSails = numSails;
     }
 
+    //Interface abstract methods
     @Override
     public void hoistSail() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        isSailHoisted = true;
+        System.out.println("Sail hoisted.");
     }
 
     @Override
     public void lowerSail() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        isSailHoisted = false;
+        System.out.println("Sail lowered.");
     }
 
     @Override
     public boolean isSailHoisted() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return isSailHoisted();
     }
 
     @Override
     public void landHo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Land ho!");
     }
 
 }
